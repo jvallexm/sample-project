@@ -4,6 +4,8 @@ const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p
 
 const words = ["the quick brown fox jumps over the lazy dog","the lazy dog jumps over the quick brown fox"];
 
+const images = [];
+
 let guessed = [];
 
 let chances = 10;
@@ -61,19 +63,20 @@ function dangerLetter(letter){
 // Resets all letters to "btn-primary"
 
 function resetLetters(){
+
 	for(let i = 0 ; i < guessed.length ; i++){
+
 		$("#" + guessed[i]).removeClass("btn-danger").addClass("btn-primary");
+
 	}
+
 }
 
 // Appends all the letters
 
 for(let i = 0 ; i < alphabet.length ; i++){
 
-	/* NEED SELECTOR FOR ALPHABET */
-
 	newLetter(alphabet[i]).appendTo("#letter-test");
-
 
 }
 
